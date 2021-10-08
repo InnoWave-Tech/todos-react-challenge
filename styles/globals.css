@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root */
+.root {
+  @apply bg-gray-50 min-h-screen;
+}
+
+.container {
+  @apply max-w-md mx-auto rounded-md py-32 px-10;
+}
+
+h1 {
+  @apply text-4xl text-center mb-14;
+}
+
+ul {
+  @apply space-y-4;
+}
+
+/* Todo */
+
+li {
+  @apply bg-yellow-200 rounded-xl shadow-md px-8 py-4 space-x-2;
+}
+
+li span {
+  @apply text-xl;
+}
+
+li.done span {
+  @apply line-through;
+}
+
+li input[type='checkbox'] {
+  @apply w-4 h-4;
+}
+
+/* Add form */
+
+.add-todo-form {
+  @apply mb-8;
+}
+
+.add-todo-form form {
+  @apply w-full space-x-4;
+}
+
+.add-todo-form form input[type='text'] {
+  @apply border-2 border-solid border-black bg-yellow-50 rounded-md p-1 h-10;
+}
+
+.add-todo-form form button {
+  @apply font-semibold bg-gray-200 px-3 py-2 rounded-xl;
+}
+
+.add-todo-form div.error {
+  @apply font-bold text-red-800 text-center rounded-md bg-red-100 p-3 mt-4;
+}
