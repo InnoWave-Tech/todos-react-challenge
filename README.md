@@ -19,7 +19,7 @@ Users can interact with the application in the following ways:
 The project is a single page Next.js app.
 
 - `pages/index` is the root React component of the application.
-- `lib/components/*` contains the React components.
+- `lib/components/*` contains the React components. This is where you will write your React code.
 - `lib/db` implements the simulated Todo database functionality.
 
 ## HTTP Todos API
@@ -35,7 +35,7 @@ There is an API running on this project:
 Some notes:
 
 - This API should be considered external and done, you won't have to change anything under `pages/api`.
-- The API internally uses the functions in `lib/db.js`.
+- The API internally uses the functions in `lib/db.js`. This file simulates our database interactions.
 - All methods return the updated todos list as a response (hint: you can use this to sync up your React application).
 - Your React components should communicate with this API to manage the Todos.
 
@@ -44,15 +44,16 @@ Some notes:
 Please implement the following tasks:
 
 - [ ] Fill in `getTodos`, `createTodo` and `toggleDone` in `lib/db.js`
-- [ ] Implement the Todo React component
-  - Display the todo item in both done/undone states
-  - Implement the toggle feature
 - [ ] Complete the App root React component
+  - Fetch the list of Todos from our API
   - Render the list of todos, showing the undone ones first
   - Render the AddTodoForm
+- [ ] Implement the Todo React component
+  - Display the todo item in both done/undone states
+  - Implement the toggle feature (with API interaction)
 - [ ] Implement the AddTodoForm React component
   - The user should not be able to create a new todo if the input box is empty
-  - When clicked, the button should create a new todo
+  - When clicked, the button should create a new todo (API interaction)
   - If there was an error creating a new todo, display the error message provided by the server (to test, create a todo with title `"error"`)
 
 For the React components, `styles/globals.css` will guide you on the expected HTML markup to render. **You shouldn't need to change any CSS.**
